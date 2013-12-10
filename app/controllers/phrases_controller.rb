@@ -10,7 +10,7 @@ class PhrasesController < ApplicationController
     if @phrase.save
       redirect_to @phrase
     else
-      render :new
+      redirect_to root_path
     end
   end
 
