@@ -17,7 +17,7 @@ class Phrase < ActiveRecord::Base
   end
 
   def hyphenate(word)
-    hyphenator.visualize(word)
+    hyphenator.visualize(word).gsub(/-/,"&ndash;")
   end
 
 private
