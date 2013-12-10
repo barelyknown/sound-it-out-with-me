@@ -2,6 +2,8 @@ class Phrase < ActiveRecord::Base
   extend FriendlyId
   friendly_id :words, use: :slugged
 
+  validates :words, length: { minimum: 1 }
+
   def duplicate?
     !!duplicate
   end
