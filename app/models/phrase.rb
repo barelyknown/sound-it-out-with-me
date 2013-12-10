@@ -23,7 +23,7 @@ class Phrase < ActiveRecord::Base
 private
 
   def hyphenator
-    Text::Hyphen.new(:language => language, :left => 1, :right => 1)
+    Text::Hyphen.new(language: language, left: 1, right: 1 )
   end
 
 end
