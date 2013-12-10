@@ -1,0 +1,5 @@
+= simple_form_for phrase do |f|
+  = f.input :language, as: :hidden, input_html: { value: "EN_US" }
+  = f.input :words, as: :string, label: false, input_html: { class: "input-lg" }, placeholder: "Type words here. We'll sound them out together."
+  = f.submit "Sound It Out", class: "btn btn-primary"
+  = link_to "Reset", root_path, class: "btn btn-default"
